@@ -1,0 +1,14 @@
+---
+
+- name: Apply OSPF Configs 
+  hosts: switches
+  gather_facts: no
+
+  tasks:
+
+    - name: Apply OSPF Configs
+      eos_config:
+        src: "configs/{{ inventory_hostname }}-ospf.cfg"
+        replace: config
+        save_when: always
+
