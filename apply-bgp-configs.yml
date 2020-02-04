@@ -1,0 +1,14 @@
+---
+
+- name: Apply BGP Configs 
+  hosts: switches
+  gather_facts: no
+
+  tasks:
+
+    - name: Apply BGP Configs
+      eos_config:
+        src: "configs/{{ inventory_hostname }}-bgp.cfg"
+        replace: config
+        save_when: always
+

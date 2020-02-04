@@ -1,0 +1,14 @@
+---
+
+- name: Apply MLAG Configs 
+  hosts: switches
+  gather_facts: no
+
+  tasks:
+
+    - name: Apply MLAG Configs
+      eos_config:
+        src: "configs/{{ inventory_hostname }}-mlag.cfg"
+        replace: config
+        save_when: always
+
