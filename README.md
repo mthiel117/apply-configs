@@ -5,3 +5,4 @@ Apply configs for the following topologies:
   - OSPF
   - BGP
   
+```ansible-playbook <playbook>```
