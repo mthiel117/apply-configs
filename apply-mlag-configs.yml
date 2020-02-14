@@ -1,7 +1,7 @@
 ---
 
 - name: Apply MLAG Configs 
-  hosts: switches
+  hosts: physical
   gather_facts: no
 
   tasks:

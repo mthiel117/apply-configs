@@ -1,7 +1,7 @@
 ---
 
 - name: Apply OSPF Configs 
-  hosts: switches
+  hosts: physical
   gather_facts: no
 
   tasks:

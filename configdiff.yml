@@ -1,0 +1,12 @@
+---
+
+- name: diff running config against master 
+  hosts: veos1
+  gather_facts: no
+
+  tasks:
+    
+    - name: diff the running config against a master config
+      eos_config:
+        diff_against: intended
+        intended_config: "{{ lookup('file', './configs/veos1-base.cfg') }}"
