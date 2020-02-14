@@ -5,6 +5,9 @@ Apply configs for the following topologies:
   - OSPF
   - BGP
   
-```ansible-playbook <playbook>```
+```
+ansible-playbook <playbook>
+ansible-playbook apply-bgp-configs.yml
+```
 
 ![diagram](network-topology.png)
