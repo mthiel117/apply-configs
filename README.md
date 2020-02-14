@@ -1,4 +1,4 @@
-# Apply configs to Lab Switches
+# Apply configs to Arista Lab Switches
 
 Apply configs for the following topologies:
   - MLAG
