@@ -8,4 +8,4 @@ Apply configs for the following topologies:
 ```ansible-playbook <playbook>```
 
 ![alt text][diagram]
-[diagram]: network-topology.jpg
+[diagram]: network-topology.png
