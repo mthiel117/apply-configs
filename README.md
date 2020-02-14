@@ -6,3 +6,6 @@ Apply configs for the following topologies:
   - BGP
   
 ```ansible-playbook <playbook>```
+
+![alt text][diagram]
+[diagram]: network-topology.jpg
