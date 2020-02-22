@@ -4,11 +4,14 @@ eos2 ansible_host=192.168.1.251
 eos3 ansible_host=192.168.1.252
 
 [virtual]
-veos1 ansible_host=192.168.1.180
-veos2 ansible_host=192.168.1.181
-veos3 ansible_host=192.168.1.182
-veos4 ansible_host=192.168.1.183
-veos5 ansible_host=192.168.1.184
+spine1 ansible_host=192.168.1.180
+spine2 ansible_host=192.168.1.181
+leaf1a ansible_host=192.168.1.182
+leaf1b ansible_host=192.168.1.183
+leaf2a ansible_host=192.168.1.184
+leaf2b ansible_host=192.168.1.185
+host1 ansible_host=192.168.1.186
+host2 ansible_host=192.168.1.187
 
 
 
