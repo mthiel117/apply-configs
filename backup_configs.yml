@@ -3,7 +3,7 @@
 - name: Backup configs
   connection: network_cli
   gather_facts: no
-  hosts: physical
+  hosts: all
   
   tasks:
 
@@ -11,13 +11,22 @@
    #  debug:
    #    msg: System {{ inventory_hostname }}
 
-   - name: Backup config
+   - name: Backup config EOS1,EOS2,EOS3
      eos_config:
        backup: yes
        backup_options:
         # need a way to modify filename target different for 1 host
          filename: "{{ inventory_hostname }}-evpn.cfg"
          dir_path: "{{ local_git_repo_path }}"
+     when: inventory_hostname in groups['eos']
+  
+   - name: Backup config POE-SW
+     eos_config:
+       backup: yes
+       backup_options:
+         filename: "{{ inventory_hostname }}.cfg"
+         dir_path: "{{ local_git_repo_path }}"
+     when: inventory_hostname in groups['mgmt']
 
 - name: Commit Configuration Changes
   hosts: localhost
