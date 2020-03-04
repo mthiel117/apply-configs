@@ -15,7 +15,8 @@
      eos_config:
        backup: yes
        backup_options:
-         filename: "{{ inventory_hostname }}.cfg"
+        # need a way to modify filename target different for 1 host
+         filename: "{{ inventory_hostname }}-evpn.cfg"
          dir_path: "{{ local_git_repo_path }}"
 
 - name: Commit Configuration Changes

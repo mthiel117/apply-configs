@@ -2,6 +2,7 @@
 eos1 ansible_host=192.168.1.250
 eos2 ansible_host=192.168.1.251
 eos3 ansible_host=192.168.1.252
+poe-sw ansible_host=192.168.1.252
 
 [virtual]
 spine1 ansible_host=192.168.1.180
